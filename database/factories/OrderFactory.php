@@ -18,6 +18,7 @@ class OrderFactory extends Factory
     {
         return [
             //
+            'order_number'=>uniqid()
         ];
     }
 }

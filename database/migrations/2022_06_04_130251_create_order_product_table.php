@@ -19,6 +19,8 @@ return new class extends Migration
             $table->unsignedBigInteger('order_id');
             $table->integer('total_price');
             $table->integer('total_qte');
+            $table->foreign('order_id')->references('id')->on('orders');
+            $table->foreign('product_id')->references('id')->on('products');
         });
     }
 

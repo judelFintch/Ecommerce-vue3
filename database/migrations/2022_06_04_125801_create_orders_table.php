@@ -17,7 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('order_number');
             $table->dateTime('shipped_at')->nullable();
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
