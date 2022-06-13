@@ -18,6 +18,12 @@ class ProductFactory extends Factory
     {
         return [
             //
+            'name' =>$this->faker->sentence(),
+            'description' => $this->faker->sentence(rand(1,2), true),
+            'image'=>$this->faker->imageUrl(),
+            'price'=>rand(10,100),
+            'status'=>$this->faker->boolean(80)
+
         ];
     }
 }
